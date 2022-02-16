@@ -9,3 +9,6 @@
 - name: prod-server configuration
   hosts: prod
   build: yes
+
+  roles:
+    - prodserver

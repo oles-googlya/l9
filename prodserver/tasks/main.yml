@@ -1,8 +1,8 @@
 ---
 - name: Ensure tomcat is present
-    apt:
-      name: tomcat9
-      state: present
+  apt:
+    name: tomcat9
+    state: present
 
 - name: Artifact delivery to dest
     synchronize:

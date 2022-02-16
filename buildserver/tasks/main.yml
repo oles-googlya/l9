@@ -16,4 +16,4 @@
   synchronize: 
     mode: pull 
     src={{ work_dir }}/target/hello-1.0.war
-    dest: /tmp/
+    dest=/tmp/

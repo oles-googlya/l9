@@ -1,0 +1,11 @@
+---
+- name: build-server configuration
+  hosts: build
+  become: yes
+
+  roles:
+    - buildserver
+
+- name: prod-server configuration
+  hosts: prod
+  build: yes

@@ -1,2 +1,3 @@
 ---
-wok_dir: /home/user/boxfuse-sample-java-war-hello
+src_url: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+work_dir: /home/user/boxfuse-sample-java-war-hello

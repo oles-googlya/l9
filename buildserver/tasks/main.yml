@@ -8,7 +8,7 @@
 
 - name: Cloning the repo
     git: 
-      repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+      repo: {{ src_url }}
       dest: {{ work_dir }}
       clone: yes
       update: yes 
@@ -16,10 +16,6 @@
 - name: Artifact generation
     command: mvn package
     args:
-        chdir: {{ work_dir }}
-
-- name: Artifact delivery step 1
-    synchronize:
-      mode: pull
-      src: {{ work_dir }}/target/hello-1.0.war
-      dest: /tmp/
+      chdir: {{ work_dir }}
+    notify: 
+      - moving the artifact st 1

@@ -1,0 +1,10 @@
+- name: Ensure tomcat is present
+    apt:
+      name: tomcat9
+      state: present
+
+- name: Artifact delivery to dest
+    synchronize:
+      src: /tmp/hello-1.0.war
+      dest: /var/lib/tomcat9/webapps/
+      delete: yes

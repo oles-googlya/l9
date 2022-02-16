@@ -7,11 +7,7 @@
     - git
 
 - name: Cloning the repo
-  git: 
-    repo: {{ src_url }}
-    dest: {{ work_dir }}
-    clone: yes
-    update: yes 
+  git: repo={{ src_url }} dest={{ work_dir }} clone=yes update=yes 
 
 - name: Artifact generation
   command: mvn package

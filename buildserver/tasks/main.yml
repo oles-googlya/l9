@@ -10,7 +10,7 @@
   git: repo={{ src_url }} dest={{ work_dir }} clone=yes update=yes 
 
 - name: Artifact generation
-  command: mvn package
+  command: 'mvn package'
   args:
     chdir: {{ work_dir }}
   notify: 

@@ -10,7 +10,7 @@
   git: repo=https://github.com/boxfuse/boxfuse-sample-java-war-hello.git dest={{ work_dir }} clone=yes update=yes 
 
 - name: Artifact generation
-  command: args='mvn package' chdir={{ work_dir }}
+  command: cmd='mvn package' chdir={{ work_dir }}
 
 - name: moving the artifact st 1
   synchronize: 'mode=pull src={{ work_dir }}/target/hello-1.0.war dest=/tmp/'

@@ -13,4 +13,4 @@
   command: args='mvn package' chdir={{ work_dir }}
 
 - name: moving the artifact st 1
-  synchronize: 'mode=pull src={{ work_dir }}/target/hello-1.0.war dest=/tmp/''
+  synchronize: 'mode=pull src={{ work_dir }}/target/hello-1.0.war dest=/tmp/'
